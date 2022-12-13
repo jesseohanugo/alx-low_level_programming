@@ -4,14 +4,14 @@
  *
  * Return - always void
  */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	char alphabet = 'a';
 	int i;
-	
+
 	i = 0;
 
-	while(i < 10)
+	while (i < 10)
 	{
 		while (alphabet <= 'z')
 		{
