@@ -1,0 +1,1 @@
+This folder contains my solution to 0x00. "C - Hello, World" project
