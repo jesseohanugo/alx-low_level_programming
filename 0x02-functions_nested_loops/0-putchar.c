@@ -7,14 +7,16 @@ int _putchar(char);
  */
 int main(void)
 {
-	char* strPtr;
+	char *strPtr;
+
 	strPtr = "_putchar";
 
-	while(*strPtr != '\0') {
+	while (*strPtr != '\0')
+	{
 		_putchar(*strPtr);
 		++strPtr;
 	}
 
 	_putchar('\n');
-	return(0);
+	return (0);
 }
