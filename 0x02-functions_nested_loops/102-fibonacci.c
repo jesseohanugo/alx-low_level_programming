@@ -15,11 +15,14 @@ int main(void)
 
 	while (i < 50)
 	{
-		printf("%ld, ", a);
+		printf("%ld", a);
+		if (i != 49)
+			printf(", ");
 		b = x + a;
 		x = a;
 		a = b;
 		++i;
 	}
+	printf("\n");
 	return (0);
 }
