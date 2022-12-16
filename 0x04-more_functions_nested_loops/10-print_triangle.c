@@ -7,15 +7,15 @@
  */
 void print_triangle(int size)
 {
-	int height = 0;
-	int width = 0;
+	int height = 1;
+	int width = 1;
 
-	while (height < size)
+	while (height <= size)
 	{
-		width = 0;
-		while (width <= height)
+		width = 1;
+		while (width <= size)
 		{
-			if (width < size - height - 1)
+			if (width < (size + 1 - height))
 				_putchar(' ');
 
 			else
