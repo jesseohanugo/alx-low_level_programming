@@ -7,14 +7,18 @@
  */
 void print_number(int n)
 {
+	unsigned int val = 0;
+
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		val = -n;
 	}
+	else
+		val = n
 
-	if (n / 10)
-		print_number(n / 10);
+	if (val / 10)
+		print_number(val / 10);
 
-	_putchar(n % 10 + '0');
+	_putchar((val % 10) + '0');
 }
