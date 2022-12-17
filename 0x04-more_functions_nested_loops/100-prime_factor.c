@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	long int value = 12852475143;
+	long int value = 612852475143;
 	int i;
 
 	while (value % 2 == 0)
