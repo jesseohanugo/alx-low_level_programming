@@ -1,4 +1,5 @@
 #include "main.h"
+int _strlen(char *);
 
 /**
  * print_rev - prints a string in reverse followed by a newline
@@ -9,18 +10,33 @@
 
 void print_rev(char *s)
 {
-	char *begin = s;
+	int length = _strlen(s);
+	int i = length;	
 
-	while (*(s + 1) != '\0')
+	while (i > 0)
 	{
-		++s;
-	}
-
-	while (s >= begin)
-	{
-		_putchar(*s);
-		--s;
+		_putchar(s[i - 1]);
+		--i;
 	}
 
 	_putchar('\n');
+}
+
+/**
+ * _strlen - returns the length of a string
+ * @s: the string
+ *
+ * Return: length of s
+ */
+int _strlen(char *s)
+{
+	int count = 0;
+
+	while (*s != '\0')
+	{
+		++count;
+		++s;
+	}
+
+	return (count);
 }

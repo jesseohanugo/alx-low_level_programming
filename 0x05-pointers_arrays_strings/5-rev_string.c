@@ -9,7 +9,7 @@ int _strlen(char *);
 void rev_string(char *s)
 {
 	const int length = _strlen(s);
-	char temporary_string[100];
+	char temporary_string[10000];
 	int i = 0;
 
 	while (i < length)
