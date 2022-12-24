@@ -1,0 +1,7 @@
+*main.c
+*~
+*.exe
+\#*
+temp.h
+_putchar.c
+learn.c
