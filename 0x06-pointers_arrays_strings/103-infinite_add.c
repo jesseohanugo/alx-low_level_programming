@@ -71,7 +71,7 @@ void adjust_result(int i, int size_r, char *r, int extra)
 	int j;
 	int tp[100000];
 	int a;
-	
+
 	a = extra ? 0 : 1;
 
 	if (i != 0 && i < size_r - 2)
