@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void compute_length(int *const, char *);
-void adjust_result(int, int, char *);
+void adjust_result(int, int, char *, int);
 
 /**
  * infinite_add - adds two numbers
@@ -52,7 +52,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (extra != 0 && i < size_r - 1)
 		r[size_r - i - 2] = extra + '0';
 
-	adjust_result(i, size_r, r);
+	adjust_result(i, size_r, r, extra);
+
 	return (r);
 }
 
@@ -61,18 +62,23 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
  * @i: number of characters - 1
  * @size_r: size of r
  * @r: pointer to result
+ * @extra: the carried value
  *
  * Return: void
  */
-void adjust_result(int i, int size_r, char *r)
+void adjust_result(int i, int size_r, char *r, int extra)
 {
 	int j;
 	int tp[100000];
+	int a;
+	
+	a = extra ? 0 : 1;
 
-	if (i < size_r - 2)
+	if (i != 0 && i < size_r - 2)
 	{
+		i = i - a;
 		for (j = 0; j <= i; ++j)
-			tp[j] = r[size_r - i - 2 + j];
+			tp[j] = r[size_r - i - 2  + j];
 
 		for (j = 0; j <= i; ++j)
 			r[j] = tp[j];
