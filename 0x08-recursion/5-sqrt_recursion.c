@@ -26,7 +26,7 @@ int find_root(int n, int root)
 	if (root * root == n)
 		return (root);
 
-	if (root == n )
+	if (root == n)
 		return (-1);
 
 
